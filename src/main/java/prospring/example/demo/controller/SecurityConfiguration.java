@@ -24,6 +24,7 @@ public class SecurityConfiguration {
                         //control access privileges
                         .requestMatchers("/camas", "/aseo", "/comida").permitAll()
                         .requestMatchers("/ropa", "/juguetes").permitAll()
+                        .requestMatchers("/suplementos").permitAll()
                         .anyRequest().permitAll()
                 )
                 .httpBasic(withDefaults())
